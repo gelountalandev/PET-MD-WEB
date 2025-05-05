@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
-export class LoginPageComponent {
+export class LoginComponent {
   username = '';
   password = '';
 
