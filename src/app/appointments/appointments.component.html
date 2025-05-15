@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="form-section">
+    <label>Full name</label>
+    <div class="name-fields">
+      <input type="text" placeholder="Last Name:" />
+      <input type="text" placeholder="First Name:" />
+    </div>
+
+    <label>Pet ID</label>
+    <input type="text" placeholder="ID:" />
+
+    <label>Contact No.</label>
+    <input type="text" placeholder="Contact Number" />
+
+    <label>Consultation Type</label>
+    <div class="consultation-buttons">
+      <button>Video</button>
+      <button>Chat</button>
+      <button>Voice</button>
+    </div>
+
+    <label>Available Doctors</label>
+    <div class="dropdown">
+      <button class="dropdown-toggle" (click)="toggleDropdown()">
+        Available Doctors ▼
+      </button>
+      <div class="doctor-list" *ngIf="isDropdownOpen">
+        <button class="doctors" *ngFor="let doctor of doctors">{{ doctor }}</button>
+      </div>
+    </div>
+  </div>
+  <div class="calendar-section">
+    <h3>Select preferred date and time</h3>
+
+    <div *ngIf="selectedDate" class="selected-date">
+      Selected Date: {{ selectedDate | date:'fullDate' }}
+    </div>
+
+    <div class="calendar-wrapper">
+      <mat-calendar (selectedChange)="onDateSelected($event)"></mat-calendar>
+    </div>
+
+    <div class="time-slots">
+      <label *ngFor="let time of times" [class.selected]="time.selected" (click)="toggleTime(time)">
+        <input type="checkbox" [(ngModel)]="time.selected" hidden />
+        {{ time.label }}
+      </label>
+    </div>
+
+    <button class="save-btn">Save</button>
+  </div>
+</div>

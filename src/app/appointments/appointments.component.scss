@@ -1,0 +1,133 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 50px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+}
+
+.name-fields {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"],
+[type="number"]
+{
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  background-color: #91abda;
+  color: white;
+}
+
+.consultation-buttons button
+{
+  background-color: #4e6da8;
+  color: white;
+  border: none;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80px;
+  cursor: pointer;
+}
+
+.dropdown-toggle {
+  background-color: #4e6da8;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.doctor-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.calendar-section {
+  text-align: center;
+
+}
+
+.selected-date {
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: #4668f1;
+}
+
+.calendar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(70, 104, 241, 0.08);
+  padding: 8px;
+}
+
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.time-slots label {
+  background-color: #91abda;
+  padding: 8px 18px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background 0.2s, border 0.2s;
+  user-select: none;
+}
+
+.time-slots label.selected,
+.time-slots label:hover {
+  background-color: #4e6da8;
+  color: #fff;
+  border: 2px solid #4e6da8;
+}
+
+.save-btn {
+  background-color: #4e6da8;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 18px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.save-btn:hover {
+  background-color: #2746a6;
+}
+
+.doctor-list button {
+  background-color: #4e6da8;
+  color: white;
+  border: none;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 17rem;
+  cursor: pointer;
+}
+
