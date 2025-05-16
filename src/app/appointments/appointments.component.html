@@ -3,19 +3,16 @@
 
     <label>Your Pets</label>
     <div class="pet-container">
-      <button class="pet-dropdown" (click)="toggleDropdown()">
+      <button class="pet-dropdown" (click)="togglePetDropdown()">
         Choose Your Pets Below ▼
       </button>
-      <div class="pet-list" *ngIf="isDropdownOpen">
+      <div class="pet-list" *ngIf="isPetDropdownOpen">
         <button class="pets" *ngFor="let pet of pet"> {{pet}} </button>
       </div>
     </div>
 
     <label>Pet ID</label>
     <input type="text" placeholder="ID:" />
-
-    <!-- <label>Contact No.</label>
-    <input type="text" placeholder="Contact Number" /> -->
 
     <label>Consultation Type</label>
     <div class="consultation-buttons">
@@ -25,14 +22,13 @@
     </div>
 
     <label>Available Doctors</label>
-    <!-- <div class="dropdown"> -->
-      <button class="doctor-container">
-        Choose The Available Doctors Below 
-      </button>
-      <div class="doctor-list">
-        <button class="doctors" *ngFor="let doctor of doctors">{{ doctor }}</button>
-      </div>
-    <!-- </div> -->
+    <button class="doctor-container" (click)="toggleDoctorDropdown()">
+      Choose The Available Doctors Below ▼
+    </button>
+    <div class="doctor-list" *ngIf="isDoctorDropdownOpen">
+      <button class="doctors" *ngFor="let doctor of doctors">{{ doctor }}</button>
+    </div>
+
   </div>
   <div class="calendar-section">
     <h3>Select preferred date and time</h3>

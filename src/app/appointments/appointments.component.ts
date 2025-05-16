@@ -48,9 +48,15 @@ export class AppointmentsComponent {
     time.selected = !time.selected;
   }
 
-  isDropdownOpen = false;
+  isPetDropdownOpen = false;
+  isDoctorDropdownOpen = false;
 
-  toggleDropdown() {
-    this.isDropdownOpen = !this.isDropdownOpen;
+  togglePetDropdown() {
+    this.isPetDropdownOpen = !this.isPetDropdownOpen;
   }
+
+  toggleDoctorDropdown() {
+  this.isDoctorDropdownOpen = !this.isDoctorDropdownOpen;
+  }
+
 }
