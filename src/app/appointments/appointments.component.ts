@@ -31,6 +31,12 @@ export class AppointmentsComponent {
     { label: '02 PM', selected: true },
   ];
 
+  pet = [
+    'Marc logan',
+    'Cocomelon',
+    'Volkanovski',
+  ];
+
   selectedDate: Date | null = null;
 
   onDateSelected(date: Date): void {

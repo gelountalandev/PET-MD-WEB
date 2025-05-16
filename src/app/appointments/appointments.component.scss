@@ -12,14 +12,7 @@
   width: 300px;
 }
 
-.name-fields {
-  display: flex;
-  gap: 10px;
-}
-
-input[type="text"],
-[type="number"]
-{
+input{
   padding: 8px;
   border-radius: 10px;
   border: none;
@@ -29,7 +22,7 @@ input[type="text"],
 
 .consultation-buttons button
 {
-  background-color: #4e6da8;
+  background-color: #91abda;
   color: white;
   border: none;
   margin: 5px;
@@ -39,13 +32,16 @@ input[type="text"],
   cursor: pointer;
 }
 
-.dropdown-toggle {
+.consultation-buttons :hover{
+  background-color: #4e6da8;
+}
+
+.doctor-container {
   background-color: #4e6da8;
   color: white;
   padding: 10px;
   border: none;
   border-radius: 8px;
-  cursor: pointer;
 }
 
 .doctor-list {
@@ -121,7 +117,7 @@ input[type="text"],
 }
 
 .doctor-list button {
-  background-color: #4e6da8;
+  background-color: #91abda;
   color: white;
   border: none;
   margin: 5px;
@@ -131,3 +127,31 @@ input[type="text"],
   cursor: pointer;
 }
 
+.doctor-list button.selected,
+.doctor-list button:hover{
+  background-color: #4e6da8;
+}
+
+.pet-dropdown{
+  background-color: #4e6da8;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+.pets{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  background-color: #91abda;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  width: 10rem;
+  cursor: pointer;
+}
+.pets:hover{
+background-color: #4e6da8;
+}
