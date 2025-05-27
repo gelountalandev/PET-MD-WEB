@@ -15,7 +15,24 @@ import { RouterModule } from '@angular/router';
 })
 export class PetOwnerRegisterComponent {
 
-  onSubmit(form: NgForm){
+  onSubmit(form: NgForm) {
+    const { Firstname, Lastname, Email, Username, Password, Confirmpassword } = form.value;
+    if (!Firstname || !Lastname || !Email || !Username || !Password || !Confirmpassword) {
+      alert('Please fill out all the Fields!');
+      return;
+    }
+
+    if (Password !== Confirmpassword) {
+      alert('Password does not Match!');
+      return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(Email)) {
+      alert('Invalid Email Address!');
+      return;
+    }
+
     console.log('Forms', form.value);
   }
 }
