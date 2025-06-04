@@ -18,14 +18,12 @@ import { USER_TYPE } from '../app.constants';
 export class VetRegisterComponent implements OnInit {
   vetRegisterModel = {
     user: {
-      id: undefined,
       email: '',
       username: '',
       password: '',
       user_type: USER_TYPE.VET
     },
     vet: {
-      user_id: 0,
       name: '',
       clinic_name: '',
       clinic_location: ''
@@ -48,7 +46,7 @@ export class VetRegisterComponent implements OnInit {
         user_type: this.vetRegisterModel.user?.user_type ?? USER_TYPE.VET,
       },
       vet: {
-        user_id: this.vetRegisterModel.user?.id,
+        // user_id: this.vetRegisterModel.user?.id,
         clinic_name: this.vetRegisterModel.vet?.clinic_name,
         name: this.vetRegisterModel.vet?.name,
         clinic_location: this.vetRegisterModel.vet?.clinic_location,
