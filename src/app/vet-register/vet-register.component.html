@@ -1,73 +1,84 @@
-<form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
-    <div class="container">
-        <div class="petmd">
-          <h1>PetMD</h1>
-          <p>One Click Away To Experts Pet Care! </p>
-          <button class="read-more" type="button">Read More</button>
-        </div>
-        
-        <div class="create-account">
-            <h3> Create Vet Account</h3>
+<form #registerForm="ngForm" (ngSubmit)="registerVet()">
+  <div class="container">
+    <div class="petmd">
+      <h1>PetMD</h1>
+      <p>One Click Away To Experts Pet Care!</p>
+      <button class="read-more" type="button">Read More</button>
+    </div>
 
-            <div class="separator">
-                <input 
-                type="text" 
-                placeholder="Name" 
-                class="input" 
-                name="name"
-                ngModel
-                />
-                <input
-                type="email" 
-                placeholder="Email" 
-                class="input" 
-                name="email"
-                ngModel
-                />
-            </div>
+    <div class="create-account">
+      <h3>Create Vet Account</h3>
 
-            <div class="separator">
-                <input
-                type="text" 
-                placeholder="Clinic Name" 
-                class="input" 
-                name="clinic name"
-                ngModel
-                />
-                <input
-                type="text" 
-                placeholder="Clinic Address" 
-                class="input" 
-                name="clinic address"
-                ngModel
-                />
-            </div>
-
-            <div class="separator">
-                <input 
-                type="username" 
-                placeholder="Username" 
-                class="input" 
-                name="username"
-                ngModel
-                />
-                <input 
-                type="password" 
-                placeholder="Password" 
-                class="input" 
-                name="password"
-                ngModel
-                />
-            </div>
-
-            <button class="create-account-button"type="submit">
-                Create Account
-            </button>
-
-            <h5>
-                Already Have an Account?
-                <a routerLink=" "> sign in</a>
-            </h5>
-        </div>
+      <div class="separator">
+        <input
+          type="text"
+          placeholder="Name"
+          class="input"
+          name="name"
+          id="name"
+          required
+          [(ngModel)]="vetRegisterModel.vet.name"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          class="input"
+          name="email"
+          id="email"
+          required
+          [(ngModel)]="vetRegisterModel.user.email"
+        />
       </div>
+
+      <div class="separator">
+        <input
+          type="text"
+          placeholder="Clinic Name"
+          class="input"
+          name="clinic_name"
+          id="clinic_name"
+          required
+          [(ngModel)]="vetRegisterModel.vet.clinic_name"
+        />
+        <input
+          type="text"
+          placeholder="Clinic Address"
+          class="input"
+          name="clinic_location"
+          id="clinic_location"
+          required
+          [(ngModel)]="vetRegisterModel.vet.clinic_location"
+        />
+      </div>
+
+      <div class="separator">
+        <input
+          type="text"
+          placeholder="Username"
+          class="input"
+          name="username"
+          id="username"
+          required
+          [(ngModel)]="vetRegisterModel.user.username"
+        />
+        <input
+          type="text"
+          placeholder="Password"
+          class="input"
+          name="password"
+          id="password"
+          required
+          [(ngModel)]="vetRegisterModel.user.password"
+        />
+      </div>
+        <button class="create-account-button" type="submit">
+          Create Account
+        </button>
+
+      <h5>
+        Already Have an Account?
+        <a routerLink=" "> sign in</a>
+      </h5>
+    </div>
+  </div>
 </form>
