@@ -1,8 +1,8 @@
 export interface ConsultationModel {
-  id: number,
-  appointment_id: number,
+  id?: number,
+  appointment_id?: number,
   notes?: string,
   prescription?: string,
-  duration: string,
+  duration?: string,
   created_at?: Date,
 }
