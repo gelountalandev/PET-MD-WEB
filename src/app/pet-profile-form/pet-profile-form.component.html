@@ -3,14 +3,67 @@
     <div class="card">
       <div class="form-title">Enter Pet Details</div>
       <div class="card-content">
-
         <div class="separator">
-          <div class="pet-info-row"><label>Name:</label><input type="text" /></div>
-          <div class="pet-info-row"><label>Breed:</label><input type="text" /></div>
-          <div class="pet-info-row"><label>Species:</label><input type="text" /></div>
-          <div class="pet-info-row"><label>Birth date:</label><input type="text" /></div>
-          <div class="pet-info-row"><label>Gender:</label><input type="text" /></div>
-          <div class="pet-info-row"><label>Weight:</label><input type="text" /></div>
+          <div class="pet-info-row">
+            <label>Name:</label
+            ><input
+              type="text"
+              id="name"
+              name="name"
+              required
+              [(ngModel)]="petModel.name"
+            />
+          </div>
+          <div class="pet-info-row">
+            <label>Breed:</label
+            ><input
+              type="text"
+              id="breed"
+              name="breed"
+              required
+              [(ngModel)]="petModel.breed"
+            />
+          </div>
+          <div class="pet-info-row">
+            <label>Species:</label
+            ><input
+              type="text"
+              id="species"
+              name="species"
+              required
+              [(ngModel)]="petModel.species"
+            />
+          </div>
+          <div class="pet-info-row">
+            <label>Birth date:</label
+            ><input
+              type="text"
+              id="birth_date"
+              name="birth_date"
+              required
+              [(ngModel)]="petModel.birth_date"
+            />
+          </div>
+          <div class="pet-info-row">
+            <label>Gender:</label
+            ><input
+              type="text"
+              id="gender"
+              name="gender"
+              required
+              [(ngModel)]="petModel.gender"
+            />
+          </div>
+          <div class="pet-info-row">
+            <label>Weight:</label
+            ><input
+              type="text"
+              id="weight"
+              name="weight"
+              required
+              [(ngModel)]="petModel.weight"
+            />
+          </div>
         </div>
 
         <div class="image-card">
@@ -30,7 +83,9 @@
 
       <div class="card-actions">
         <button>Delete Profile</button>
-        <button>Save Profile</button>
+        <form (ngSubmit)="savePet()" #eventForm="ngForm">
+          <button type="submit">Save Profile</button>
+        </form>
       </div>
     </div>
   </div>
