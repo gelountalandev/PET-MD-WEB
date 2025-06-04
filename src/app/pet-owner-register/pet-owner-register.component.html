@@ -1,73 +1,37 @@
 <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
-    <div class="container">
-        <div class="petmd">
-          <h1>PetMD</h1>
-          <p>One Click Away To Experts Pet Care! </p>
-          <button class="read-more" type="button">Read More</button>
-        </div>
-        
-        <div class="create-account">
-            <h3> Create Account</h3>
+  <div class="container">
+    <div class="petmd">
+      <h1>PetMD</h1>
+      <p>One Click Away To Experts Pet Care! </p>
+      <button class="read-more" type="button">Read More</button>
+    </div>
 
-            <div class="separator">
-                <input 
-                type="text" 
-                placeholder="First Name" 
-                class="input" 
-                name="Firstname"
-                ngModel
-                />
-                <input
-                type="text" 
-                placeholder="Last Name" 
-                class="input" 
-                name="Lastname"
-                ngModel
-                />
-            </div>
+    <div class="create-account">
+      <h3> Create Account</h3>
 
-            <div class="separator">
-                <input
-                type="email" 
-                placeholder="Email" 
-                class="input" 
-                name="Email"
-                ngModel
-                />
-                <input
-                type="text" 
-                placeholder="Username" 
-                class="input" 
-                name="Username"
-                ngModel
-                />
-            </div>
-
-            <div class="separator">
-                <input 
-                type="password" 
-                placeholder="Password" 
-                class="input" 
-                name="password"
-                ngModel
-                />
-                <input 
-                type="password" 
-                placeholder="Confirm Password" 
-                class="input" 
-                name="password"
-                ngModel
-                />
-            </div>
-
-            <button class="create-account-button"type="submit">
-                Create Account
-            </button>
-
-            <h5>
-                Already Have an Account?
-                <a routerLink="/"> sign in</a>
-            </h5>
-        </div>
+      <div class="separator">
+        <input type="text" placeholder="First Name" class="input" name="Firstname" ngModel />
+        <input type="text" placeholder="Last Name" class="input" name="Lastname" ngModel />
       </div>
+
+      <div class="separator">
+        <input type="email" placeholder="Email" class="input" name="Email" ngModel />
+        <input type="text" placeholder="Username" class="input" name="Username" ngModel />
+      </div>
+
+      <div class="separator">
+        <input type="password" placeholder="Password" class="input" name="Password" ngModel />
+        <input type="password" placeholder="Confirm Password" class="input" name="Confirmpassword" ngModel />
+      </div>
+
+      <button class="create-account-button" type="submit">
+        Create Account
+      </button>
+
+      <h5>
+        Already Have an Account?
+        <a routerLink="/"> sign in</a>
+      </h5>
+    </div>
+  </div>
 </form>
