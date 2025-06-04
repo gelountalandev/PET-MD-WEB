@@ -17,15 +17,15 @@ export class UserService {
   ) { }
 
   petOwnerRegister(petOwnerRegisterModel: PetOwnerRegisterModel): Observable<PetOwnerRegisterModel> {
-    return this.http.post<PetOwnerRegisterModel>(`${BASE_URL}/users`, petOwnerRegisterModel)
+    return this.http.post<PetOwnerRegisterModel>(`${BASE_URL}/users/register/pet-owner`, petOwnerRegisterModel)
   }
 
   vetRegister(vetRegisterModel: VetRegisterModel): Observable<VetRegisterModel> {
-    return this.http.post<VetRegisterModel>(`${BASE_URL}/users`, vetRegisterModel)
+    return this.http.post<VetRegisterModel>(`${BASE_URL}/users/register/vet`, vetRegisterModel)
   }
 
   login(username: string, password: string): Observable<UserModel> {
-    return this.http.post<UserModel>(`${BASE_URL}/login`, { username, password })
+    return this.http.post<UserModel>(`${BASE_URL}/users/login`, { username, password })
   }
 
   getVets(): Observable<VetModel[]> {
