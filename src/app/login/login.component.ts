@@ -28,19 +28,13 @@ export class LoginComponent implements OnInit {
     this.submitted = true;
 
     this.userService.login(this.username, this.password).subscribe({
-      next: (userModel: any) => {
-
-        if (userModel) {
-          alert(`Welcome ${this.username}!`);
-          // this.router.navigate(['kung saang dashboard dadalhin']);
-
-        } else {
-          alert('Invalid username or password!');
-        }
+      next: () => {
+        alert(`Welcome ${this.username}!`);
+        // this.router.navigate(['kung saang dashboard dadalhin']);
       },
       error: (err) => {
         console.error('Login failed:', err);
-        alert('An error occurred. Please try again.');
+        alert('Invalid username or password!');
       }
     });
   }
