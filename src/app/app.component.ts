@@ -5,6 +5,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from "./login/login.component";
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-  ],
+    LoginComponent
+],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

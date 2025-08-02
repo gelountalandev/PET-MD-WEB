@@ -30,7 +30,11 @@ export class PetProfileFormComponent implements OnInit {
   savePet(): void {
     const session = this.localStorageService.getData<any>('session');
     const petModel = {
+<<<<<<< HEAD
       user_id: session?.access_token.user_id,
+=======
+      user_id: 1,
+>>>>>>> 12ed8f2 (pushed pet-md-web to my own repo)
       name: this.petModel.name,
       breed: this.petModel.breed,
       species: this.petModel.species,
